@@ -11,8 +11,9 @@ Notes:
 - For getting the complete vesrion of a specific code, right click on it and hit 'save link as' to download that.
 
 - The full explanation on examples, is above them.
+- My Mathematica's vesrion is 12.1
 
-Example
+Examples
 --------
 1) All you need for a 2D sphere is here! (including Christoffel symbols, Riemanian tensors, Ricci tensor and scalar)
 
