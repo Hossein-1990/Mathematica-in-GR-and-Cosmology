@@ -10,7 +10,7 @@ Notes:
 
 - For getting the complete vesrion of a specific code, right click on it and hit 'save link as' to download that.
 
-- The full explanation on examples, is above them.
+- The full explanation of examples, is above them.
 - My Mathematica's vesrion is 12.1
 
 Examples
