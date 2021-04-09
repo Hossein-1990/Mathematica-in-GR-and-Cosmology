@@ -11,7 +11,8 @@ Notes:
 
 -- The full explanation on examples, is above them.
 
-
+Example
+--------
 1) All you need for a 2D sphere is here! (including Christoffel symbols, Riemanian tensors etc)
 
 [`on_the_sphere.nb`](../../raw/main/on_the_sphere.nb)
