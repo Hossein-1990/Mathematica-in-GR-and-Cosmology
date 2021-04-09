@@ -6,11 +6,11 @@ http://www.xact.es
 
 
 Notes:
-======
+------
 
--- For getting the complete vesrion of a specific code, right click on it and hit 'save link as' to download that.
+-For getting the complete vesrion of a specific code, right click on it and hit 'save link as' to download that.
 
--- The full explanation on examples, is above them.
+-The full explanation on examples, is above them.
 
 Example
 --------
