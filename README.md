@@ -6,6 +6,7 @@ http://www.xact.es
 
 
 Notes:
+======
 
 -- For getting the complete vesrion of a specific code, right click on it and hit 'save link as' to download that.
 
@@ -13,6 +14,6 @@ Notes:
 
 Example
 --------
-1) All you need for a 2D sphere is here! (including Christoffel symbols, Riemanian tensors etc)
+1) All you need for a 2D sphere is here! (including Christoffel symbols, Riemanian tensors, Ricci tensor and scalar)
 
-[`on_the_sphere.nb`](../../raw/main/on_the_sphere.nb)
+[`2D_sphere.nb`](../../raw/main/2D_sphere.nb)
