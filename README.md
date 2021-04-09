@@ -7,4 +7,4 @@ http://www.xact.es
 
 Notes about examples:
 1) 
-[`on\ the\ sphere.nb`](../../raw/main/on\ the\ sphere.nb)
+[`on_the_sphere.nb`](../../raw/main/on_the_sphere.nb)
