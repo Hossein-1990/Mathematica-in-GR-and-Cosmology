@@ -5,4 +5,4 @@ For using xAct, you have to add this library to your Mathematica software (I sup
 http://www.xact.es
 
 
-[`on the sphere.nb`](../../raw/master/on the sphere.nb)
+[`on the sphere.nb`](../../raw/master/on_the_sphere.nb)
