@@ -15,6 +15,5 @@ Notes:
 
 Examples
 --------
-1) All you need for a 2D sphere is here! (including Christoffel symbols, Riemanian tensors, Ricci tensor and scalar)
-
-[`2D_sphere.nb`](../../raw/main/2D_sphere.nb)
+1) All you need for a 2D sphere is here! (including Christoffel symbols, Riemanian tensors, Ricci tensor and scalar) [`2D_sphere.nb`](../../raw/main/2D_sphere.nb)
+2) All you need in polar coordinate is here!! (including Christoffel symbols and Riemanian tensors)  [`polar.nb`](../../raw/main/polar.nb)
