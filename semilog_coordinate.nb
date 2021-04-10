@@ -1,0 +1,1138 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     40913,       1130]
+NotebookOptionsPosition[     39366,       1099]
+NotebookOutlinePosition[     39858,       1117]
+CellTagsIndexPosition[     39815,       1114]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"Block", "[", 
+  RowBox[{
+   RowBox[{"{", "Print", "}"}], ",", 
+   RowBox[{"<<", "xAct`xCoba`"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$DefInfoQ", "=", "False"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$UndefInfoQ", "=", "False"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$CVVerbose", "=", "False"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$PrePrint", "=", "ScreenDollarIndices"}], ";"}]}], "Input",
+ CellChangeTimes->{3.812309861368602*^9},
+ CellLabel->"In[1]:=",ExpressionUUID->"7beac6e9-c8a7-4b7d-acd5-1d8b8b349914"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DefManifold", "[", 
+   RowBox[{"M", ",", "2", ",", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", "b", ",", "c", ",", "d", ",", "e"}], "}"}]}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.812301724358843*^9, 3.812301739866187*^9}, {
+  3.812309180777253*^9, 3.8123091812928343`*^9}, {3.8141985199181156`*^9, 
+  3.8141985210234528`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"54829633-6cf4-4311-898f-e457882f6bd2"],
+
+Cell[BoxData[
+ RowBox[{"DefMetric", "[", 
+  RowBox[{"1", ",", 
+   RowBox[{"semimetric", "[", 
+    RowBox[{
+     RowBox[{"-", "a"}], ",", 
+     RowBox[{"-", "b"}]}], "]"}], ",", "CD", ",", 
+   RowBox[{"{", 
+    RowBox[{"\"\<;\>\"", ",", "\"\<\[Del]\>\""}], "}"}], ",", 
+   RowBox[{"PrintAs", "\[Rule]", "\"\<g\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8123017429803886`*^9, 3.8123018173987584`*^9}, {
+   3.812309943949891*^9, 3.812309946450534*^9}, 3.8141986601610966`*^9},
+ CellLabel->"In[7]:=",ExpressionUUID->"6ceae84c-3d5b-444d-b209-6133ac4fe9cd"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DefChart", "[", 
+   RowBox[{"pq", ",", "M", ",", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "2"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"p", "[", "]"}], ",", 
+      RowBox[{"q", "[", "]"}]}], "}"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.812301820803763*^9, 3.8123018776954937`*^9}, {
+  3.812301920033798*^9, 3.812301925071697*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"655c7d0c-ba54-4a29-9650-5247c13d1d29"],
+
+Cell[BoxData[
+ RowBox[{"DefConstantSymbol", "[", "v", "]"}]], "Input",
+ CellChangeTimes->{{3.8128895573862925`*^9, 3.812889609792017*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"f0058560-9fb2-43fc-b9f2-dc73312a0546"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pqmatrix", "=", 
+   RowBox[{"DiagonalMatrix", "[", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", 
+      FractionBox["1", 
+       RowBox[{
+        SuperscriptBox["v", "2"], 
+        SuperscriptBox[
+         RowBox[{"q", "[", "]"}], "2"]}]]}], "}"}], "]"}]}], ";", " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"p", " ", "=", " ", "x"}], " ", ",", " ", 
+    RowBox[{"q", " ", "=", " ", 
+     SuperscriptBox["e", "by"]}]}], " ", "*)"}]}]], "Input",
+ CellChangeTimes->{{3.812301984063823*^9, 3.8123020256705074`*^9}, {
+  3.8123094869986897`*^9, 3.812309498871805*^9}, {3.8126441201076975`*^9, 
+  3.8126441202736273`*^9}, {3.812644511258006*^9, 3.812644511894641*^9}, {
+  3.812889230110174*^9, 3.8128892303860235`*^9}, {3.812889437545434*^9, 
+  3.812889442549579*^9}, {3.812889523842636*^9, 3.812889523938565*^9}, {
+  3.8128895764372625`*^9, 3.8128895769319863`*^9}, {3.8128896124864893`*^9, 
+  3.8128896131170993`*^9}, {3.827036597982753*^9, 3.827036599514423*^9}, {
+  3.8270371000341578`*^9, 
+  3.8270371336245427`*^9}},ExpressionUUID->"bc9f4cff-fa53-449a-b250-\
+465a23faa5b3"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MetricInBasis", "[", 
+   RowBox[{"semimetric", ",", 
+    RowBox[{"-", "pq"}], ",", "pqmatrix"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.8123019327682843`*^9, 3.8123019449926605`*^9}, {
+   3.8123020522289314`*^9, 3.8123020619712815`*^9}, 3.81231005774724*^9, {
+   3.812310297888139*^9, 3.8123103538342953`*^9}, {3.8123104011701794`*^9, 
+   3.812310435411754*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"75b82018-2c3c-4455-b519-ea86707287a3"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MetricCompute", "[", 
+   RowBox[{"semimetric", ",", "pq", ",", "All"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.81230214026585*^9, 3.8123021598160295`*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"692ca598-fbdf-4434-9531-78986100a73d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"ChristoffelCDPDpq", "[", 
+      RowBox[{"a", ",", 
+       RowBox[{"-", "b"}], ",", 
+       RowBox[{"-", "c"}]}], "]"}], "//", 
+     RowBox[{"ToBasis", "[", "pq", "]"}]}], "//", "ComponentArray"}], "//", 
+   "Flatten"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", "\[Equal]", 
+   RowBox[{"(", 
+    RowBox[{"%", "//", "ToValues"}], ")"}]}], "//", "Thread"}]}], "Input",
+ CellChangeTimes->{{3.812302184966563*^9, 3.812302253241721*^9}, {
+  3.812302330920394*^9, 3.812302332714323*^9}, {3.812302620992139*^9, 
+  3.812302621891633*^9}, {3.812309198889408*^9, 3.8123093172008505`*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"c4f357fd-abe8-40f5-a044-5bf7c1aea734"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"\[CapitalGamma]", "[", 
+          RowBox[{"\[Del]", ",", 
+           StyleBox["\[ScriptCapitalD]",
+            FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+         StyleBox[GridBox[{
+            {
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], " ", " "},
+            {" ", 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`ChristoffelCDPDpq[{1, $CellContext`pq}, {
+      1, -$CellContext`pq}, {1, -$CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"\[CapitalGamma]", "[", 
+          RowBox[{"\[Del]", ",", 
+           StyleBox["\[ScriptCapitalD]",
+            FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+         StyleBox[GridBox[{
+            {
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], " ", " "},
+            {" ", 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`ChristoffelCDPDpq[{1, $CellContext`pq}, {
+      1, -$CellContext`pq}, {2, -$CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"\[CapitalGamma]", "[", 
+          RowBox[{"\[Del]", ",", 
+           StyleBox["\[ScriptCapitalD]",
+            FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+         StyleBox[GridBox[{
+            {
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], " ", " "},
+            {" ", 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`ChristoffelCDPDpq[{1, $CellContext`pq}, {
+      2, -$CellContext`pq}, {1, -$CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"\[CapitalGamma]", "[", 
+          RowBox[{"\[Del]", ",", 
+           StyleBox["\[ScriptCapitalD]",
+            FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+         StyleBox[GridBox[{
+            {
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], " ", " "},
+            {" ", 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`ChristoffelCDPDpq[{1, $CellContext`pq}, {
+      2, -$CellContext`pq}, {2, -$CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"\[CapitalGamma]", "[", 
+          RowBox[{"\[Del]", ",", 
+           StyleBox["\[ScriptCapitalD]",
+            FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+         StyleBox[GridBox[{
+            {
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], " ", " "},
+            {" ", 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`ChristoffelCDPDpq[{2, $CellContext`pq}, {
+      1, -$CellContext`pq}, {1, -$CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"\[CapitalGamma]", "[", 
+          RowBox[{"\[Del]", ",", 
+           StyleBox["\[ScriptCapitalD]",
+            FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+         StyleBox[GridBox[{
+            {
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], " ", " "},
+            {" ", 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`ChristoffelCDPDpq[{2, $CellContext`pq}, {
+      1, -$CellContext`pq}, {2, -$CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"\[CapitalGamma]", "[", 
+          RowBox[{"\[Del]", ",", 
+           StyleBox["\[ScriptCapitalD]",
+            FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+         StyleBox[GridBox[{
+            {
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], " ", " "},
+            {" ", 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`ChristoffelCDPDpq[{2, $CellContext`pq}, {
+      2, -$CellContext`pq}, {1, -$CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"\[CapitalGamma]", "[", 
+          RowBox[{"\[Del]", ",", 
+           StyleBox["\[ScriptCapitalD]",
+            FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+         StyleBox[GridBox[{
+            {
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], " ", " "},
+            {" ", 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`ChristoffelCDPDpq[{2, $CellContext`pq}, {
+      2, -$CellContext`pq}, {2, -$CellContext`pq}],
+     Editable->False], "\[Equal]", 
+    RowBox[{"-", 
+     FractionBox["1", 
+      InterpretationBox[
+       StyleBox["q",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`q[],
+       Editable->False]]}]}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.8123022540302525`*^9, 3.812302336099369*^9, {3.812302615514291*^9, 
+   3.812302622808452*^9}, {3.8123092514648*^9, 3.8123092634358983`*^9}, {
+   3.8123092996149387`*^9, 3.812309320310768*^9}, 3.8123096525259285`*^9, 
+   3.81230987907476*^9, 3.8123099692195854`*^9, 3.8123100837181067`*^9, 
+   3.81231037158652*^9, 3.812310451189768*^9, 3.812310508552972*^9, 
+   3.812310567396338*^9, 3.8126441486692195`*^9, 3.812644527939369*^9, 
+   3.812644708536145*^9, 3.8128892401743574`*^9, 3.8128894637912807`*^9, 
+   3.812889539463602*^9, 3.812889596912445*^9, 3.81288963425589*^9, 
+   3.8141984775165386`*^9, 3.8141985653847003`*^9, 3.814198636015973*^9, 
+   3.814198673403445*^9},
+ CellLabel->"Out[15]=",ExpressionUUID->"3cc189eb-63a5-4a60-a216-00fbb8c48fff"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"RiemannCD", "[", 
+      RowBox[{
+       RowBox[{"-", "a"}], ",", 
+       RowBox[{"-", "b"}], ",", 
+       RowBox[{"-", "c"}], ",", "d"}], "]"}], "//", 
+     RowBox[{"ToBasis", "[", "pq", "]"}]}], "//", "ComponentArray"}], "//", 
+   "Flatten"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", "\[Equal]", 
+   RowBox[{"(", 
+    RowBox[{"%", "//", "ToValues"}], ")"}]}], "//", "Thread"}]}], "Input",
+ CellChangeTimes->{{3.8141984797132573`*^9, 3.8141985507761183`*^9}, {
+  3.8141986181332903`*^9, 3.814198621840146*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"a068b195-4296-41d4-a1b2-ed6da3989ea5"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"R", "[", "\[Del]", "]"}], 
+         StyleBox[GridBox[{
+            {" ", " ", " ", 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]]},
+            {
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], " "}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`RiemannCD[{1, -$CellContext`pq}, {1, -$CellContext`pq}, {
+      1, -$CellContext`pq}, {1, $CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"R", "[", "\[Del]", "]"}], 
+         StyleBox[GridBox[{
+            {" ", " ", " ", 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]]},
+            {
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], " "}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`RiemannCD[{1, -$CellContext`pq}, {1, -$CellContext`pq}, {
+      1, -$CellContext`pq}, {2, $CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"R", "[", "\[Del]", "]"}], 
+         StyleBox[GridBox[{
+            {" ", " ", " ", 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]]},
+            {
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], " "}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`RiemannCD[{1, -$CellContext`pq}, {1, -$CellContext`pq}, {
+      2, -$CellContext`pq}, {1, $CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"R", "[", "\[Del]", "]"}], 
+         StyleBox[GridBox[{
+            {" ", " ", " ", 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]]},
+            {
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], " "}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`RiemannCD[{1, -$CellContext`pq}, {1, -$CellContext`pq}, {
+      2, -$CellContext`pq}, {2, $CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"R", "[", "\[Del]", "]"}], 
+         StyleBox[GridBox[{
+            {" ", " ", " ", 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]]},
+            {
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], " "}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`RiemannCD[{1, -$CellContext`pq}, {2, -$CellContext`pq}, {
+      1, -$CellContext`pq}, {1, $CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"R", "[", "\[Del]", "]"}], 
+         StyleBox[GridBox[{
+            {" ", " ", " ", 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]]},
+            {
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], " "}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`RiemannCD[{1, -$CellContext`pq}, {2, -$CellContext`pq}, {
+      1, -$CellContext`pq}, {2, $CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"R", "[", "\[Del]", "]"}], 
+         StyleBox[GridBox[{
+            {" ", " ", " ", 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]]},
+            {
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], " "}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`RiemannCD[{1, -$CellContext`pq}, {2, -$CellContext`pq}, {
+      2, -$CellContext`pq}, {1, $CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"R", "[", "\[Del]", "]"}], 
+         StyleBox[GridBox[{
+            {" ", " ", " ", 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]]},
+            {
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], " "}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`RiemannCD[{1, -$CellContext`pq}, {2, -$CellContext`pq}, {
+      2, -$CellContext`pq}, {2, $CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"R", "[", "\[Del]", "]"}], 
+         StyleBox[GridBox[{
+            {" ", " ", " ", 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]]},
+            {
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], " "}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`RiemannCD[{2, -$CellContext`pq}, {1, -$CellContext`pq}, {
+      1, -$CellContext`pq}, {1, $CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"R", "[", "\[Del]", "]"}], 
+         StyleBox[GridBox[{
+            {" ", " ", " ", 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]]},
+            {
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], " "}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`RiemannCD[{2, -$CellContext`pq}, {1, -$CellContext`pq}, {
+      1, -$CellContext`pq}, {2, $CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"R", "[", "\[Del]", "]"}], 
+         StyleBox[GridBox[{
+            {" ", " ", " ", 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]]},
+            {
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], " "}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`RiemannCD[{2, -$CellContext`pq}, {1, -$CellContext`pq}, {
+      2, -$CellContext`pq}, {1, $CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"R", "[", "\[Del]", "]"}], 
+         StyleBox[GridBox[{
+            {" ", " ", " ", 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]]},
+            {
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], " "}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`RiemannCD[{2, -$CellContext`pq}, {1, -$CellContext`pq}, {
+      2, -$CellContext`pq}, {2, $CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"R", "[", "\[Del]", "]"}], 
+         StyleBox[GridBox[{
+            {" ", " ", " ", 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]]},
+            {
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], " "}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`RiemannCD[{2, -$CellContext`pq}, {2, -$CellContext`pq}, {
+      1, -$CellContext`pq}, {1, $CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"R", "[", "\[Del]", "]"}], 
+         StyleBox[GridBox[{
+            {" ", " ", " ", 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]]},
+            {
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], " "}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`RiemannCD[{2, -$CellContext`pq}, {2, -$CellContext`pq}, {
+      1, -$CellContext`pq}, {2, $CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"R", "[", "\[Del]", "]"}], 
+         StyleBox[GridBox[{
+            {" ", " ", " ", 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]]},
+            {
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], " "}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`RiemannCD[{2, -$CellContext`pq}, {2, -$CellContext`pq}, {
+      2, -$CellContext`pq}, {1, $CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"R", "[", "\[Del]", "]"}], 
+         StyleBox[GridBox[{
+            {" ", " ", " ", 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]]},
+            {
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], " "}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`RiemannCD[{2, -$CellContext`pq}, {2, -$CellContext`pq}, {
+      2, -$CellContext`pq}, {2, $CellContext`pq}],
+     Editable->False], "\[Equal]", "0"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.814198568617819*^9, 3.8141986360939274`*^9, 
+  3.814198673478401*^9},
+ CellLabel->"Out[17]=",ExpressionUUID->"6a406421-614b-467c-b556-06f8bc1a6142"]
+}, Open  ]]
+},
+WindowSize->{759, 581},
+WindowMargins->{{295, Automatic}, {24, Automatic}},
+TaggingRules->{
+ "WelcomeScreenSettings" -> {"FEStarting" -> False}, "TryRealOnly" -> False},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (June 9, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"69d899a8-79f8-4d77-89fd-0fc975cbf167"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 598, 14, 105, "Input",ExpressionUUID->"7beac6e9-c8a7-4b7d-acd5-1d8b8b349914"],
+Cell[1159, 36, 448, 10, 28, "Input",ExpressionUUID->"54829633-6cf4-4311-898f-e457882f6bd2"],
+Cell[1610, 48, 557, 12, 28, "Input",ExpressionUUID->"6ceae84c-3d5b-444d-b209-6133ac4fe9cd"],
+Cell[2170, 62, 475, 12, 28, "Input",ExpressionUUID->"655c7d0c-ba54-4a29-9650-5247c13d1d29"],
+Cell[2648, 76, 216, 3, 28, "Input",ExpressionUUID->"f0058560-9fb2-43fc-b9f2-dc73312a0546"],
+Cell[2867, 81, 1111, 25, 49, "Input",ExpressionUUID->"bc9f4cff-fa53-449a-b250-465a23faa5b3"],
+Cell[3981, 108, 483, 9, 28, "Input",ExpressionUUID->"75b82018-2c3c-4455-b519-ea86707287a3"],
+Cell[4467, 119, 276, 5, 28, "Input",ExpressionUUID->"692ca598-fbdf-4434-9531-78986100a73d"],
+Cell[CellGroupData[{
+Cell[4768, 128, 746, 18, 48, "Input",ExpressionUUID->"c4f357fd-abe8-40f5-a044-5bf7c1aea734"],
+Cell[5517, 148, 11818, 326, 81, "Output",ExpressionUUID->"3cc189eb-63a5-4a60-a216-00fbb8c48fff"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17372, 479, 680, 18, 48, "Input",ExpressionUUID->"a068b195-4296-41d4-a1b2-ed6da3989ea5"],
+Cell[18055, 499, 21295, 597, 86, "Output",ExpressionUUID->"6a406421-614b-467c-b556-06f8bc1a6142"]
+}, Open  ]]
+}
+]
+*)
+
