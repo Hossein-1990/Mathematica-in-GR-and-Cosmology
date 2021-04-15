@@ -1,0 +1,646 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     20962,        636]
+NotebookOptionsPosition[     20161,        613]
+NotebookOutlinePosition[     20653,        631]
+CellTagsIndexPosition[     20610,        628]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"Block", "[", 
+  RowBox[{
+   RowBox[{"{", "Print", "}"}], ",", 
+   RowBox[{"<<", "xAct`xCoba`"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$DefInfoQ", "=", "False"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$UndefInfoQ", "=", "False"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$CVVerbose", "=", "False"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$PrePrint", "=", "ScreenDollarIndices"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"DefManifold", "[", 
+   RowBox[{"M", ",", "3", ",", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", "b", ",", "c", ",", "d"}], "}"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"DefMetric", "[", 
+   RowBox[{"1", ",", 
+    RowBox[{"metricpq", "[", 
+     RowBox[{
+      RowBox[{"-", "a"}], ",", 
+      RowBox[{"-", "b"}]}], "]"}], ",", "CD", ",", 
+    RowBox[{"{", 
+     RowBox[{"\"\<;\>\"", ",", "\"\<\[Del]\>\""}], "}"}], ",", " ", 
+    RowBox[{"PrintAs", "\[Rule]", " ", "\"\<g\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"DefChart", "[", 
+   RowBox[{"sph", ",", "M", ",", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "2", ",", "3"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"r", "[", "]"}], ",", 
+      RowBox[{"\[Theta]", "[", "]"}], ",", 
+      RowBox[{"\[Phi]", "[", "]"}]}], "}"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"metricsph", "=", 
+   RowBox[{"DiagonalMatrix", "[", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", 
+      SuperscriptBox[
+       RowBox[{"r", "[", "]"}], "2"], ",", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"r", "[", "]"}], "2"], 
+       SuperscriptBox[
+        RowBox[{"Sin", "[", 
+         RowBox[{"\[Theta]", "[", "]"}], "]"}], "2"]}]}], "}"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"MetricInBasis", "[", 
+   RowBox[{"metricpq", ",", 
+    RowBox[{"-", "sph"}], ",", "metricsph"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"MetricCompute", "[", 
+   RowBox[{"metricpq", ",", "sph", ",", "All"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"ChristoffelCDPDsph", "[", 
+      RowBox[{"a", ",", 
+       RowBox[{"-", "b"}], ",", 
+       RowBox[{"-", "c"}]}], "]"}], "//", 
+     RowBox[{"ToBasis", "[", "sph", "]"}]}], "//", "ComponentArray"}], "//", 
+   "Flatten"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"%", "\[Equal]", " ", 
+    RowBox[{"(", 
+     RowBox[{"%", "//", "ToValues"}], ")"}]}], "//", "Thread"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"%", "/.", 
+  RowBox[{
+   RowBox[{"_", "\[Equal]", "0"}], "\[Rule]", " ", 
+   "Nothing"}]}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{
+  3.827463823027315*^9, {3.8274638597071447`*^9, 3.8274639690322857`*^9}, {
+   3.8274640514439383`*^9, 3.827464079895542*^9}, {3.8274641257690496`*^9, 
+   3.827464135055357*^9}, {3.8274641795120773`*^9, 3.8274642000848565`*^9}, {
+   3.827464247313223*^9, 3.8274642508605194`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"adb771a3-7233-4779-ad10-93bff5b653bf"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"\[CapitalGamma]", "[", 
+          RowBox[{"\[Del]", ",", 
+           StyleBox["\[ScriptCapitalD]",
+            FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+         StyleBox[GridBox[{
+            {
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], " ", " "},
+            {" ", 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`ChristoffelCDPDsph[{1, $CellContext`sph}, {
+      2, -$CellContext`sph}, {2, -$CellContext`sph}],
+     Editable->False], "\[Equal]", 
+    RowBox[{"-", 
+     InterpretationBox[
+      StyleBox["r",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`r[],
+      Editable->False]}]}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"\[CapitalGamma]", "[", 
+          RowBox[{"\[Del]", ",", 
+           StyleBox["\[ScriptCapitalD]",
+            FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+         StyleBox[GridBox[{
+            {
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], " ", " "},
+            {" ", 
+             StyleBox["3",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["3",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`ChristoffelCDPDsph[{1, $CellContext`sph}, {
+      3, -$CellContext`sph}, {3, -$CellContext`sph}],
+     Editable->False], "\[Equal]", 
+    RowBox[{
+     RowBox[{"-", 
+      InterpretationBox[
+       StyleBox["r",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`r[],
+       Editable->False]}], " ", 
+     SuperscriptBox[
+      RowBox[{
+       InterpretationBox[
+        StyleBox["Sin",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        Sin,
+        Editable->False], "[", 
+       InterpretationBox[
+        StyleBox["\[Theta]",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`\[Theta][],
+        Editable->False], "]"}], "2"]}]}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"\[CapitalGamma]", "[", 
+          RowBox[{"\[Del]", ",", 
+           StyleBox["\[ScriptCapitalD]",
+            FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+         StyleBox[GridBox[{
+            {
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], " ", " "},
+            {" ", 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`ChristoffelCDPDsph[{2, $CellContext`sph}, {
+      1, -$CellContext`sph}, {2, -$CellContext`sph}],
+     Editable->False], "\[Equal]", 
+    FractionBox["1", 
+     InterpretationBox[
+      StyleBox["r",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`r[],
+      Editable->False]]}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"\[CapitalGamma]", "[", 
+          RowBox[{"\[Del]", ",", 
+           StyleBox["\[ScriptCapitalD]",
+            FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+         StyleBox[GridBox[{
+            {
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], " ", " "},
+            {" ", 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`ChristoffelCDPDsph[{2, $CellContext`sph}, {
+      2, -$CellContext`sph}, {1, -$CellContext`sph}],
+     Editable->False], "\[Equal]", 
+    FractionBox["1", 
+     InterpretationBox[
+      StyleBox["r",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`r[],
+      Editable->False]]}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"\[CapitalGamma]", "[", 
+          RowBox[{"\[Del]", ",", 
+           StyleBox["\[ScriptCapitalD]",
+            FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+         StyleBox[GridBox[{
+            {
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], " ", " "},
+            {" ", 
+             StyleBox["3",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["3",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`ChristoffelCDPDsph[{2, $CellContext`sph}, {
+      3, -$CellContext`sph}, {3, -$CellContext`sph}],
+     Editable->False], "\[Equal]", 
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{
+       InterpretationBox[
+        StyleBox["Cos",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        Cos,
+        Editable->False], "[", 
+       InterpretationBox[
+        StyleBox["\[Theta]",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`\[Theta][],
+        Editable->False], "]"}]}], " ", 
+     RowBox[{
+      InterpretationBox[
+       StyleBox["Sin",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       Sin,
+       Editable->False], "[", 
+      InterpretationBox[
+       StyleBox["\[Theta]",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`\[Theta][],
+       Editable->False], "]"}]}]}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"\[CapitalGamma]", "[", 
+          RowBox[{"\[Del]", ",", 
+           StyleBox["\[ScriptCapitalD]",
+            FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+         StyleBox[GridBox[{
+            {
+             StyleBox["3",
+              FontColor->RGBColor[1., 0., 0.]], " ", " "},
+            {" ", 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["3",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`ChristoffelCDPDsph[{3, $CellContext`sph}, {
+      1, -$CellContext`sph}, {3, -$CellContext`sph}],
+     Editable->False], "\[Equal]", 
+    FractionBox["1", 
+     InterpretationBox[
+      StyleBox["r",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`r[],
+      Editable->False]]}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"\[CapitalGamma]", "[", 
+          RowBox[{"\[Del]", ",", 
+           StyleBox["\[ScriptCapitalD]",
+            FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+         StyleBox[GridBox[{
+            {
+             StyleBox["3",
+              FontColor->RGBColor[1., 0., 0.]], " ", " "},
+            {" ", 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["3",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`ChristoffelCDPDsph[{3, $CellContext`sph}, {
+      2, -$CellContext`sph}, {3, -$CellContext`sph}],
+     Editable->False], "\[Equal]", 
+    RowBox[{
+     InterpretationBox[
+      StyleBox["Cot",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      Cot,
+      Editable->False], "[", 
+     InterpretationBox[
+      StyleBox["\[Theta]",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`\[Theta][],
+      Editable->False], "]"}]}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"\[CapitalGamma]", "[", 
+          RowBox[{"\[Del]", ",", 
+           StyleBox["\[ScriptCapitalD]",
+            FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+         StyleBox[GridBox[{
+            {
+             StyleBox["3",
+              FontColor->RGBColor[1., 0., 0.]], " ", " "},
+            {" ", 
+             StyleBox["3",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["1",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`ChristoffelCDPDsph[{3, $CellContext`sph}, {
+      3, -$CellContext`sph}, {1, -$CellContext`sph}],
+     Editable->False], "\[Equal]", 
+    FractionBox["1", 
+     InterpretationBox[
+      StyleBox["r",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`r[],
+      Editable->False]]}], ",", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {
+         RowBox[{"\[CapitalGamma]", "[", 
+          RowBox[{"\[Del]", ",", 
+           StyleBox["\[ScriptCapitalD]",
+            FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+         StyleBox[GridBox[{
+            {
+             StyleBox["3",
+              FontColor->RGBColor[1., 0., 0.]], " ", " "},
+            {" ", 
+             StyleBox["3",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["2",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "Rows" -> {{
+                Offset[0.]}}}],
+          FontSize->Rational[39, 4]]}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Center}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`ChristoffelCDPDsph[{3, $CellContext`sph}, {
+      3, -$CellContext`sph}, {2, -$CellContext`sph}],
+     Editable->False], "\[Equal]", 
+    RowBox[{
+     InterpretationBox[
+      StyleBox["Cot",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      Cot,
+      Editable->False], "[", 
+     InterpretationBox[
+      StyleBox["\[Theta]",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`\[Theta][],
+      Editable->False], "]"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.8274641914938717`*^9, 3.8274642193313866`*^9}, 
+   3.827464267575914*^9, 3.827464394917276*^9},
+ CellLabel->"Out[14]=",ExpressionUUID->"efae9d8d-1c56-4861-8d91-593a7812c67f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"RiemannCD", "[", 
+      RowBox[{
+       RowBox[{"-", "a"}], ",", 
+       RowBox[{"-", "b"}], ",", 
+       RowBox[{"-", "c"}], ",", "d"}], "]"}], "//", 
+     RowBox[{"ToBasis", "[", "sph", "]"}]}], "//", "ComponentArray"}], "//", 
+   "Flatten"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"%", "\[Equal]", 
+    RowBox[{"(", 
+     RowBox[{"%", "//", "ToValues"}], ")"}]}], "//", "Thread"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"%", "/.", 
+  RowBox[{
+   RowBox[{"_", "\[Equal]", "0"}], "\[Rule]", " ", "Nothing", " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{"as", " ", "you", " ", "can", " ", "see"}], ",", " ", 
+     RowBox[{"solid", " ", "sphere", " ", 
+      RowBox[{"doesn", "'"}], "t", " ", "have", " ", "curvature"}]}], 
+    "*)"}]}]}]}], "Input",
+ CellChangeTimes->{{3.827464315119919*^9, 3.8274643745008745`*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"c3a2d3ae-fc44-4a33-9e72-04f10228eef0"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{3.8274643952453747`*^9},
+ CellLabel->"Out[17]=",ExpressionUUID->"168dc899-a580-4565-8b13-f5ac958ca60b"]
+}, Open  ]]
+},
+WindowSize->{737, 622},
+WindowMargins->{{273, Automatic}, {Automatic, 20}},
+TaggingRules->{
+ "WelcomeScreenSettings" -> {"FEStarting" -> False}, "TryRealOnly" -> False},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (June 9, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"86dd8cf3-9965-48f4-8a45-e1dc826ec6f2"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3114, 90, 300, "Input",ExpressionUUID->"adb771a3-7233-4779-ad10-93bff5b653bf"],
+Cell[3697, 114, 15230, 458, 121, "Output",ExpressionUUID->"efae9d8d-1c56-4861-8d91-593a7812c67f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18964, 577, 1010, 28, 67, "Input",ExpressionUUID->"c3a2d3ae-fc44-4a33-9e72-04f10228eef0"],
+Cell[19977, 607, 168, 3, 53, "Output",ExpressionUUID->"168dc899-a580-4565-8b13-f5ac958ca60b"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
