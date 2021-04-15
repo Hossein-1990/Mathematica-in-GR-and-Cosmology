@@ -12,6 +12,7 @@ Notes:
 
 - The full explanation of examples, is above them.
 - My Mathematica's vesrion is 12.1
+- Mathematica's notation in in according to Wald's book
 - if you found any errors, don't hesitate to contact me
 
 Examples
