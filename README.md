@@ -16,6 +16,7 @@ Notes:
 
 Examples
 --------
-1) All you need for a 2D sphere is here! (including Christoffel symbols, Riemanian tensors, Ricci tensor and scalar) [`2D_sphere.nb`](../../raw/main/2D_sphere.nb)
-2) All you need in polar coordinate is here!! (including Christoffel symbols and Riemanian tensors)  [`polar_coordinate.nb`](../../raw/main/polar_coordinate.nb)
-3) All you need in semilog coordinate is here!! (including Christoffel symbols and Riemanian tensors)  [`semilog_coordinate.nb`](../../raw/main/semilog_coordinate.nb)
+1) All you need in polar coordinate is here!! (including Christoffel symbols and Riemanian tensors)  [`polar_coordinate.nb`](../../raw/main/polar_coordinate.nb)
+2) All you need in semilog coordinate is here!! (including Christoffel symbols and Riemanian tensors)  [`semilog_coordinate.nb`](../../raw/main/semilog_coordinate.nb)
+3) All you need for a 2D sphere is here! (including Christoffel symbols, Riemanian tensors, Ricci tensor and scalar) [`2D_sphere.nb`](../../raw/main/2D_sphere.nb)
+4) All you need for a solid sphere is here! (including Christoffel symbols, Riemanian tensors) [`solid_sphere.nb`](../../raw/main/solid_sphere.nb)
