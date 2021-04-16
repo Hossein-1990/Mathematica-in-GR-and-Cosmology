@@ -21,3 +21,4 @@ Examples
 2) All you need in semilog coordinate is here!! (including Christoffel symbols and Riemanian tensors)  [`semilog_coordinate.nb`](../../raw/main/semilog_coordinate.nb)
 3) All you need for a 2D sphere is here! (including Christoffel symbols, Riemanian tensors, Ricci tensor and scalar) [`2D_sphere.nb`](../../raw/main/2D_sphere.nb)
 4) All you need for a solid sphere is here! (including Christoffel symbols, Riemanian tensors) [`solid_sphere.nb`](../../raw/main/solid_sphere.nb)
+5) The first steps of deriving Schwarzschild metric (this section is adapted from the Thomas A.Moore's book) ['derivation_of_the_Schwarzschild_metric.nb'](../../raw/main/derivation_of_the_Schwarzschild_metric.nb)
