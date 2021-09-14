@@ -1,6 +1,6 @@
 # Mathematica-in-GR-and-Cosmology
 
-In this repository, I'm going to solve examples of GR and Cosmology using Mathematica. The main package for my purpose is xAct, but I'll use other packages too.
+In this repository, I'm going to solve examples of GR and Cosmology using Mathematica. The main package in my work is xAct, but I'll use other packages too.
 For using xAct, you have to add this library to your Mathematica software (I supposed you have installed Mathematica already!). You can use below link for installtion notes of this package:
 http://www.xact.es
 
@@ -8,7 +8,7 @@ http://www.xact.es
 Notes:
 ------
 
-- For getting the complete vesrion of a specific code, right click on it and hit 'save link as' to download that.
+- For getting the complete vesrion of a specific code, please right click on it and hit 'save link as' to download that.
 
 - The full explanation of examples, is above them.
 - My Mathematica's vesrion is 12.1
